@@ -15,29 +15,36 @@
       </header>
 
 <section>	
-		<form method="post" action="client.htm" >
-		<fieldset id="person">
 
+<form>
+	<fieldset id="logon">
 		<legend><center>Log On to Person to Business</center></legend>
-			<label for="uName">User Name</label>
-			<input type="text" name="uName" pattern="^\d{10}$|^[a][d][m][i][n]$" required="required"/>
+		<label for="uName">User Name</label>
+		<input type="text" placeholder="Username" id="text1"/><br />
+		<label for="Password" >Password</label>
+		<input type="password" placeholder="Password" id="text2"/><br />
+	</fieldset>
+	<input type="submit" value="Login" onclick="javascript:validate()" />
 
-			<label for="Password" >Password</label>
-			<input type="text" name="Password" pattern="^\d{10}$|^[p][a][s][s][w][o][r][d]$" required="required"/>
-					
-		</fieldset>
-		<input type="submit" value="Log On"/>
-		</form>
+</form>
 
-	<script>
-	  document.addEventListener('invalid', (function(){
-	      return function(e){
-	          e.preventDefault();
-	      };
-	  })(), true);
-	</script>
+<script type="text/javascript">
+	function validate()
+	{
+	    if(   document.getElementById("text1").value == "admin"
+	       && document.getElementById("text2").value == "password" )
+	    {
+		window.open("client.htm");
+	    }
+	    else
+	    {
+	        alert( "validation failed" );
+	    }
+	}
 
-   </body>
+</script>
+</body>
 
 </html>
+
 

@@ -134,11 +134,10 @@ footer address {
 }
 
 
-/*
-input:invalid{ 
+input:focus:invalid{ 
 	background: rgb(125,186,240) url("stop.png") bottom right no-repeat;
 }
-*/
+
 
 input:focus:valid { 
 	background: rgb(155,216,255) url("go.png") bottom right no-repeat;
